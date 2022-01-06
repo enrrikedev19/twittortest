@@ -9,7 +9,7 @@ import (
 
 /*VerPerfil retorna el perfil*/
 func VerPerfil(w http.ResponseWriter, r *http.Request) {
-	ID := r.URL.Query().Get("Id")
+	ID := r.URL.Query().Get("id")
 	if len(ID) < 1 {
 		http.Error(w, "Debe de enviar ID", http.StatusBadRequest)
 		return
